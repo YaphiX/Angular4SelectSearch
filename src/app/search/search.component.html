@@ -1,0 +1,17 @@
+<div class="search-select">
+	<form>
+	  <md-select placeholder="Favorite Singer" [(ngModel)]="selectedValue" name="food" trigger>
+	  	<md-option disabled>
+	  		<md-input-container class="example-full-width">
+      			<input  mdInput placeholder="Favorite Singer" [(ngModel)]="query" [ngModelOptions]="{standalone: true}">
+      			<on-changes [query]="query"></on-changes>
+    		</md-input-container>
+	  	</md-option>
+	    <md-option *ngFor="let item of items" [value]="item.value">
+	      {{item.value}}
+	    </md-option>
+	  </md-select>
+
+	  <p> Selected value: {{selectedValue}} </p>
+	</form>
+</div>

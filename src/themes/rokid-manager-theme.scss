@@ -1,0 +1,9 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$rokid-app-primary: mat-palette($mat-light-blue);
+$rokid-app-accent: mat-palette($mat-pink, 50, 100, 200);
+$rokid-app-theme: mat-light-theme($rokid-app-primary, $rokid-app-accent);
+
+@include angular-material-theme($rokid-app-theme);
